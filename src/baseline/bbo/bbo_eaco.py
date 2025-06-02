@@ -14,14 +14,14 @@ class BBO_EACO(Basic_Optimizer):
         self.log_interval = config.log_interval
 
         # Algorithm parameters with default values
-        self.pop_size = getattr(config, 'BBO_EACO_params', {}).get('pop_size', 50)
-        self.alpha = getattr(config, 'BBO_EACO_params', {}).get('alpha', 0.3)
-        self.rho = getattr(config, 'BBO_EACO_params', {}).get('rho', 0.1)
-        self.Q = getattr(config, 'BBO_EACO_params', {}).get('Q', 50)
-        self.p_mutate = getattr(config, 'BBO_EACO_params', {}).get('p_mutate', 0.4)
-        self.mu_max = getattr(config, 'BBO_EACO_params', {}).get('mu_max', 1.0)
-        self.lambda_max = getattr(config, 'BBO_EACO_params', {}).get('lambda_max', 1.0)
-        self.elite_size = getattr(config, 'BBO_EACO_params', {}).get('elite_size', 5)
+        self.pop_size = getattr(config, 'BBO_EACO_params', {}).get('pop_size', 100)
+        self.alpha = getattr(config, 'BBO_EACO_params', {}).get('alpha', 0.2)
+        self.rho = getattr(config, 'BBO_EACO_params', {}).get('rho', 0.2)
+        self.Q = getattr(config, 'BBO_EACO_params', {}).get('Q', 100)
+        self.p_mutate = getattr(config, 'BBO_EACO_params', {}).get('p_mutate', 0.3)
+        self.mu_max = getattr(config, 'BBO_EACO_params', {}).get('mu_max', 0.8)
+        self.lambda_max = getattr(config, 'BBO_EACO_params', {}).get('lambda_max', 0.8)
+        self.elite_size = getattr(config, 'BBO_EACO_params', {}).get('elite_size', 8)
 
         # Placeholders for algorithm state
         self.population = None

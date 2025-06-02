@@ -35,14 +35,14 @@ config = {
         'BBO_EACO': {
             'optimizer': BBO_EACO,
             'params': {
-                'pop_size': 50,
-                'alpha': 0.3,
-                'rho': 0.1,
-                'Q': 50,
-                'p_mutate': 0.4,
-                'mu_max': 1.0,
-                'lambda_max': 1.0,
-                'elite_size': 5
+                'pop_size': 100,  # 增加种群大小以保持多样性
+                'alpha': 0.2,     # 降低交叉参数使交叉更保守
+                'rho': 0.2,       # 增加信息素蒸发率以加快更新
+                'Q': 100,         # 增加信息素增量以增强影响
+                'p_mutate': 0.3,  # 降低变异概率以减少随机性
+                'mu_max': 0.8,    # 调整迁入率使迁移更平衡
+                'lambda_max': 0.8,# 调整迁出率使迁移更平衡
+                'elite_size': 8   # 增加精英解数量以保留更多好的解
             }
         },
         'DE': {

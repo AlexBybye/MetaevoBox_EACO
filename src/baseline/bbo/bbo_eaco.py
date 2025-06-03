@@ -12,7 +12,6 @@ class BBO_EACO(Basic_Optimizer):
         self.fes = 0
         self.log_index = 1
         self.log_interval = config.log_interval
-
         # Algorithm parameters with default values
         self.pop_size = getattr(config, 'BBO_EACO_params', {}).get('pop_size', 100)
         self.alpha = getattr(config, 'BBO_EACO_params', {}).get('alpha', 0.2)
